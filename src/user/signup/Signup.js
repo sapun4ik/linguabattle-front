@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import './Signup.css';
 import { Link, Redirect } from 'react-router-dom'
-import { GOOGLE_AUTH_URL, FACEBOOK_AUTH_URL } from '../../constants';
+import { GOOGLE_AUTH_URL, FACEBOOK_AUTH_URL, VK_AUTH_URL } from '../../constants';
 import { signup } from '../../util/APIUtils';
 import fbLogo from '../../img/fb-logo.png';
 import googleLogo from '../../img/google-logo.png';
+import vkLogo from '../../img/vk-logo.png';
 import Alert from 'react-s-alert';
 
 class Signup extends Component {
@@ -42,6 +43,8 @@ class SocialSignup extends Component {
                     <img src={googleLogo} alt="Google" /> Регистрация с Google</a>
                 <a className="btn btn-block social-btn facebook" href={FACEBOOK_AUTH_URL}>
                     <img src={fbLogo} alt="Facebook" /> Регистрация с Facebook</a>
+                <a className="btn btn-block social-btn vk" href={VK_AUTH_URL}>
+                    <img src={vkLogo} alt="VK" /> Регистрация с VK</a>
             </div>
         );
     }

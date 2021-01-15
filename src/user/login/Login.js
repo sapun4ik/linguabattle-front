@@ -98,7 +98,7 @@ class LoginForm extends Component {
             Alert.success("You're successfully logged in!");
             this.props.history.push("/");
         }).catch(error => {
-            Alert.error((error && error.message) || 'Oops! Something went wrong. Please try again!');
+            Alert.error((error && error.message) || 'Ой! Что-то пошло не так. Пожалуйста, попробуйте еще раз!');
         });
     }
     
@@ -106,9 +106,9 @@ class LoginForm extends Component {
         return (
             <form onSubmit={this.handleSubmit}>
                 <div className="form-item">
-                    <input type="email" name="email" 
-                        className="form-control" placeholder="Email"
-                        value={this.state.email} onChange={this.handleInputChange} required/>
+                    <input type="text" name="usernameOrEmail" 
+                        className="form-control" placeholder="Nickname or Email"
+                        value={this.state.usernameOrEmail} onChange={this.handleInputChange} required/>
                 </div>
                 <div className="form-item">
                     <input type="password" name="password" 

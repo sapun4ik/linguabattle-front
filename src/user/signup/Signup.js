@@ -95,6 +95,11 @@ class SignupForm extends Component {
                         value={this.state.name} onChange={this.handleInputChange} required/>
                 </div>
                 <div className="form-item">
+                    <input type="text" name="username" 
+                        className="form-control" placeholder="Nickname"
+                        value={this.state.username} onChange={this.handleInputChange} required/>
+                </div>
+                <div className="form-item">
                     <input type="email" name="email" 
                         className="form-control" placeholder="Email"
                         value={this.state.email} onChange={this.handleInputChange} required/>
